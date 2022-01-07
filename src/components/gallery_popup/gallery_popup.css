@@ -1,0 +1,43 @@
+.gallery-popup {
+  margin: auto;
+  text-align: center;
+}
+
+.gallery-popup img {
+  max-width: 50rem;
+  max-height: 35rem;
+}
+
+.gallery-popup .photoInfo {
+  display: inline-block;
+  color: #fff;
+}
+
+.gallery-popup .block {
+  display: flex;
+}
+
+.gallery-popup .tag {
+  min-width: 8rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.gallery-popup .text {
+  animation: typing 5s steps(31);
+}
+
+@media screen and (max-width: 80rem) {
+  .gallery-popup img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .gallery-popup {
+    text-align: left;
+  }
+  .gallery-popup img {
+    display: none;
+  }
+}

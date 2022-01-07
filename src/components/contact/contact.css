@@ -1,0 +1,90 @@
+.contact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding-top: 3rem;
+}
+
+.contact .container {
+  max-width: 80rem;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+}
+
+.touch {
+  color: black;
+  text-align: center;
+}
+.contact .col-1 {
+  width: 30rem;
+  padding: 5rem 2rem;
+}
+
+.contact .col-1 h2 {
+  font-size: 28px;
+  padding: 0.4rem 0;
+  font-weight: 900;
+}
+
+.contact .p {
+  color: var(--grey);
+}
+
+.contact .col-1 .address {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.address a {
+  color: #000;
+}
+
+.address a:hover {
+  color: var(--grey);
+}
+
+.address .googleMap {
+  padding: 1rem 0 0 0.5rem;
+}
+
+.contact .numberEmail {
+  padding-left: 1rem;
+}
+
+.contact .col-1 .icons {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0;
+}
+
+.contact .careers {
+  padding: 2rem 0;
+}
+
+.contact span {
+  color: var(--logoDarkGrey);
+}
+
+.contact .col-2 {
+  width: 30rem;
+  padding: 8rem 2rem;
+}
+
+@media screen and (max-width: 80rem) {
+  .contact {
+    margin: 1rem 0;
+  }
+
+  .contact .container {
+    flex-direction: column;
+  }
+
+  .contact .col-1 {
+    padding: 0 1rem;
+  }
+
+  .contact .col-2 {
+    padding: 1rem;
+  }
+}

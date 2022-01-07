@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  background-color: var(--darkgrey);
+  color: #fff;
+}
+
+.footer .container {
+  max-width: 1240px;
+  padding: 3rem 1rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.footer .content {
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .share {
+  display: inline;
+}
+
+.footer .text {
+  margin-right: 0.8rem;
+}

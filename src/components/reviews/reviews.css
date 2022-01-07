@@ -1,0 +1,57 @@
+.reviews {
+  height: 80vh;
+}
+
+.reviews h2 {
+  text-align: center;
+  font-size: 30px;
+  padding: 2rem 0;
+  font-weight: 900;
+  color: var(--palette2Orange);
+}
+
+.reviews .review {
+  padding: 0.5rem;
+  max-width: 30rem;
+  height: 6rem;
+  margin: auto;
+  border: 3px solid var(--palette2Orange);
+  border-radius: 15px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  align-content: stretch;
+  color: var(--darkgrey);
+  margin-bottom: 0.5rem;
+}
+
+.review .reviewNRD {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.reviewNRD .name {
+  min-width: 4rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.reviewNRD .date {
+  width: 7rem;
+}
+
+.reviewNRD .stars {
+  width: 8rem;
+}
+
+.reviews .commment {
+  text-align: center;
+  align-items: center;
+  width: 80%;
+  height: 2.5rem;
+  margin: auto;
+}
+
+.reviews .rating {
+  display: none;
+}

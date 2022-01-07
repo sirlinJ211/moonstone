@@ -1,0 +1,85 @@
+.gallery {
+  height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gallery .slideshow-text {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 40rem;
+}
+
+.gallery .slideText {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.gallery .slideText .text {
+  display: inline-block;
+  height: 4rem;
+  width: 40rem;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Courgette", cursive;
+
+  background: linear-gradient(to bottom, #fff 0%, #f8cbad 50%, #ffbd9b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gallery .slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 25rem;
+}
+
+.gallery .slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.gallery .slide {
+  display: inline-block;
+  height: 36rem;
+  width: 25rem;
+  background-repeat: no-repeat;
+}
+
+.gallery .slideshowDots {
+  text-align: center;
+}
+
+.gallery .slideshowDot {
+  display: inline-block;
+  height: 10px;
+  width: 20px;
+  border-radius: 10%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #fff;
+}
+
+.gallery .slideshowDot.active {
+  background-color: var(--palette2Orange);
+}
+
+.gallery .link {
+  margin: 30px;
+}
+
+.gallery .link .about-link {
+  font-size: 22px;
+  top: 80%;
+  color: #000;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 5px 20px;
+  background-color: var(--lightgrey);
+}
+
+.gallery .link .about-link:hover {
+  background-color: var(--LogoBeige);
+}
