@@ -6,8 +6,6 @@ import {
   onSnapshot,
   orderBy,
   query,
-  getDocs,
-  where,
   getDoc,
   doc,
 } from "@firebase/firestore";
@@ -18,9 +16,7 @@ const GalleryDetail = () => {
   const [photos, setPhotos] = useState([]);
   const [sort, setSort] = useState("all");
   const [selectedPhoto, setSelectedPhoto] = useState(null);
-  const [selectedPhotoID, setSelectedPhotoID] = useState(null);
   const categoryRef = useRef();
-  const popupRef = useRef();
   const [click, setClick] = useState(false);
   const handleClick = () => {
     setClick(false);

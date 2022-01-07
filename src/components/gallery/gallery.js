@@ -72,7 +72,7 @@ const Gallery = () => {
           </div>
           <div className="link">
             <Link to="/gallery" className="about-link">
-              - View Gallery -
+              View Gallery
             </Link>
           </div>
         </div>

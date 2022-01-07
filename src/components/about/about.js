@@ -8,9 +8,6 @@ const About = () => {
       <div className="container">
         <div className="content">
           <img className="aboutImg" src={imgSrc} alt="" />
-          {/* <div className="aboutText">
-            <p>Moonstone Studio help captures your precious moment!</p>
-          </div> */}
         </div>
       </div>
     </div>

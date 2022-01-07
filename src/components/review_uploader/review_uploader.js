@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./review_uploader.css";
 import database from "../../service/firebase";
-import { collection, addDoc, serverTimestamp } from "@firebase/firestore";
+import { collection, addDoc } from "@firebase/firestore";
 
 const ReviewUploader = () => {
   const formRef = useRef();
@@ -13,7 +13,7 @@ const ReviewUploader = () => {
 
   const [loader, setLoader] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoader(true);
     const collectionRef = collection(database, "reviews");
@@ -21,9 +21,9 @@ const ReviewUploader = () => {
       name,
       rate: rating,
       review,
-      timestamp: serverTimestamp(),
+      timestamp: Date(),
     };
-    addDoc(collectionRef, payload)
+    await addDoc(collectionRef, payload)
       .then(() => {
         alert("Thank you for leaving a review");
         setLoader(false);
@@ -73,7 +73,7 @@ const ReviewUploader = () => {
         <div className="part2">
           <textarea
             className="commment"
-            placeholder="Add a written review"
+            placeholder="Leave your Feedback"
             onChange={(e) => setReview(e.target.value)}
           ></textarea>
           <button
