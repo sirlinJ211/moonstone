@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../image/favicon.ico";
+import Logo from "../../image/moonstonestudio-logo.png";
 import "./navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
