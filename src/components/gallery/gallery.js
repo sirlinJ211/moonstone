@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import photos from "./photos.js";
+import { slidePhotos } from "./photos.js";
 import "./gallery.css";
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,7 @@ const Gallery = () => {
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === photos.length - 1 ? 0 : prevIndex + 1
+          prevIndex === slidePhotos.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -38,7 +38,7 @@ const Gallery = () => {
               className="slideText"
               style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
             >
-              {photos.map((image, index) => (
+              {slidePhotos.map((image, index) => (
                 <p className="text" key={index}>
                   {image.text}
                 </p>
@@ -50,7 +50,7 @@ const Gallery = () => {
               className="slideshowSlider"
               style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
             >
-              {photos.map((image, index) => (
+              {slidePhotos.map((image, index) => (
                 <div
                   className="slide"
                   key={index}
@@ -59,7 +59,7 @@ const Gallery = () => {
               ))}
             </div>
             <div className="slideshowDots">
-              {photos.map((_, idx) => (
+              {slidePhotos.map((_, idx) => (
                 <div
                   key={idx}
                   className={`slideshowDot${index === idx ? " active" : ""}`}

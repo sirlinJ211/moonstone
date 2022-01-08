@@ -22,41 +22,39 @@ const Reviews = () => {
         <div className="content">
           <h2>REVIEWS</h2>
           <div className="list">
-            {reviews.map((review, i) => {
-              if (i < 5) {
-                const date = Date(review.timestamp.seconds).slice(4, 15);
-                return (
-                  <div className="review" key={i}>
-                    <div className="reviewNRD">
-                      <div className="name">{review.name}</div>
-                      <div className="date">({date})</div>
-                      <div className="stars">
-                        {[...Array(5)].map((star, i) => {
-                          const ratingValue = i + 1;
-                          const rate = review.rate;
-                          return (
-                            <label key={i}>
-                              <input
-                                type="radio"
-                                className="rating"
-                                value={ratingValue}
-                              />
-                              <FaStar
-                                className="star"
-                                color={
-                                  ratingValue <= rate ? "#f8cbad" : "#a5a5a5"
-                                }
-                                size={20}
-                              />
-                            </label>
-                          );
-                        })}
-                      </div>
+            {reviews.slice(0, 5).map((review, i) => {
+              const date = review.timestamp.slice(4, 15);
+              return (
+                <div className="review" key={i}>
+                  <div className="reviewNRD">
+                    <div className="name">{review.name}</div>
+                    <div className="date">({date})</div>
+                    <div className="stars">
+                      {[...Array(5)].map((star, i) => {
+                        const ratingValue = i + 1;
+                        const rate = review.rate;
+                        return (
+                          <label key={i}>
+                            <input
+                              type="radio"
+                              className="rating"
+                              value={ratingValue}
+                            />
+                            <FaStar
+                              className="star"
+                              color={
+                                ratingValue <= rate ? "#f8cbad" : "#a5a5a5"
+                              }
+                              size={20}
+                            />
+                          </label>
+                        );
+                      })}
                     </div>
-                    <div className="commment">"{review.review}"</div>
                   </div>
-                );
-              }
+                  <div className="commment">"{review.review}"</div>
+                </div>
+              );
             })}
           </div>
         </div>

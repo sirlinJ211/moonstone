@@ -58,6 +58,14 @@ const GalleryDetail = () => {
     );
   };
 
+  const noCard = () => {
+    return (
+      <div className="noCard">
+        <h2>There is no photo</h2>
+      </div>
+    );
+  };
+
   return (
     <div className="gallery_datail">
       <div className="container">
@@ -82,6 +90,7 @@ const GalleryDetail = () => {
                 if (item) {
                   return galleryCard(item, index);
                 }
+                return noCard;
               }
               if (sort === "other") {
                 if (
@@ -90,6 +99,7 @@ const GalleryDetail = () => {
                 ) {
                   return galleryCard(item, index);
                 }
+                return noCard;
               }
               if (
                 sort === "portrait" ||
@@ -99,10 +109,11 @@ const GalleryDetail = () => {
                 if (item.projectCategory === sort) {
                   return galleryCard(item, index);
                 }
+              return noCard;
             })}
           </div>
 
-          {selectedPhoto == null && click == false ? null : (
+          {selectedPhoto === null && click === false ? null : (
             <div className="popup">
               <i className="bx bxs-x" onClick={handleClick}>
                 <FaTimes size={20} style={{ color: "#f8cbad" }} />

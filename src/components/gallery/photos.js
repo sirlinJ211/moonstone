@@ -1,4 +1,4 @@
-export default [
+export const slidePhotos = [
   {
     id: 1,
     title: "Portrait",

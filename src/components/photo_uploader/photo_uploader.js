@@ -5,7 +5,7 @@ import { addDoc, collection, serverTimestamp } from "@firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "@firebase/storage";
 import { storage } from "../../service/firebase";
 import db from "../../service/firebase";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PhotoUploader = () => {
   const formRef = useRef();
@@ -15,8 +15,6 @@ const PhotoUploader = () => {
   const projectDateRef = useRef();
   const projectDescriptionRef = useRef();
   const [progress, setProgress] = useState(0);
-
-  const navigate = useNavigate;
 
   const resetBtn = () => {
     formRef.current.reset();
