@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/moonstone/static/css/main.31cf8f87.css",
-    "main.js": "/moonstone/static/js/main.704155c0.js",
+    "main.css": "/moonstone/static/css/main.0f8df2ae.css",
+    "main.js": "/moonstone/static/js/main.979923f6.js",
     "static/media/home_about.jpg": "/moonstone/static/media/home_about.c254acc648e1a103d5f2.jpg",
     "static/media/moonstonestudio-logo.png": "/moonstone/static/media/moonstonestudio-logo.c336e8bbf1b00eae41e0.png",
     "index.html": "/moonstone/index.html",
-    "main.31cf8f87.css.map": "/moonstone/static/css/main.31cf8f87.css.map",
-    "main.704155c0.js.map": "/moonstone/static/js/main.704155c0.js.map"
+    "main.0f8df2ae.css.map": "/moonstone/static/css/main.0f8df2ae.css.map",
+    "main.979923f6.js.map": "/moonstone/static/js/main.979923f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.31cf8f87.css",
-    "static/js/main.704155c0.js"
+    "static/css/main.0f8df2ae.css",
+    "static/js/main.979923f6.js"
   ]
 }
